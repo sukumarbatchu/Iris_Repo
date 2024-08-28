@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 def load_model():
-    return joblib.load('model/iris_model.pkl')
+    return joblib.load('iris_model.pkl')
 
 def test_model_prediction():
     model = load_model()
