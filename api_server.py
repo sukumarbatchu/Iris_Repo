@@ -4,8 +4,11 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the trained model
 model = joblib.load('iris_model.pkl')
+
+@app.route('/')
+def home():
+    return "Welcome to the Iris Model API. Use POST /predict to get predictions."
 
 @app.route('/predict', methods=['POST'])
 def predict():
