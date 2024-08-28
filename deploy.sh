@@ -1,4 +1,6 @@
 #!/bin/bash
+# Access secret key
+echo "Using secret key: $DEPLOY_ENV"
 
 # Build the Docker image
 docker build -t iris-model-app .
